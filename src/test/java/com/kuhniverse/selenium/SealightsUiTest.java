@@ -16,7 +16,8 @@ public class SealightsUiTest extends Locomotive {
     }
     @Test
     public void testSayHello() throws InterruptedException {
-        click("#say-hello");
+        Thread.sleep(10*1000);
+         click("#say-hello");
         Thread.sleep(15*1000);
         String text = getText("#output");
         Assert.assertEquals("Hello World", text);
