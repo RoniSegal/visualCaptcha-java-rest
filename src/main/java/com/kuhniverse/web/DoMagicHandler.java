@@ -2,7 +2,6 @@ package com.kuhniverse.web;
  
 public class DoMagicHandler {
 	public String getDoMagic() {
-		int a=0;
 		try{
 			System.out.println("DoMagicHandler thread: " + Thread.currentThread().getId());
 			this.doMagic();
