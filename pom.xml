@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<jvmArguments>-Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080 -Dsl.featuresData.enablePerThreadCoverage=false -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
+                	<jvmArguments>-Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080 -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -195,9 +195,9 @@
                        <artifactId>maven-surefire-plugin</artifactId>
                        <version>2.19</version>
                        <configuration>
-                           <argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -Dsl.featuresData.enablePerThreadCoverage=false -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -javaagent:${sl.testListenerPath}</argLine>
-                           <!--<parallel>methods</parallel>-->
-                           <!--<threadCount>5</threadCount>-->
+                           <argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -javaagent:${sl.testListenerPath}</argLine>
+                           <parallel>methods</parallel>
+                           <threadCount>5</threadCount>
                        </configuration>
                    </plugin>
                    <plugin>
