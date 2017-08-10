@@ -24,6 +24,7 @@ public class SealightsUiTest extends Locomotive {
     }
     @Test
     public void testDoMagic() throws InterruptedException {
+        Thread.sleep(10*1000);
         click("#do-magic");
         Thread.sleep(15*1000);
         String text = getText("#output");
