@@ -196,7 +196,7 @@
                         <version>1.4.13</version>
                         <configuration>
                             <tokenFile>sl_token.txt</tokenFile>
-                            <buildSessionIdFile>buildSessionId.txt</buildSessionIdFile>
+                            <buildSessionIdFile>buildSessionId</buildSessionIdFile>
                             <createBuildSessionId>false</createBuildSessionId>
                             <moduleName>${project.name}</moduleName>
                             <workspacepath>${project.build.outputDirectory}</workspacepath>
