@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<jvmArguments>-javaagent:${sl.testListenerPath} -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8888</jvmArguments>
+                	<jvmArguments>-javaagent:${sl.testListenerPath} -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8888 -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toFile=true -Dsl.log.folder=server-logs -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.enableUpgrade=false -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -190,7 +190,17 @@
             </properties>
            <build>
                <plugins>
-                     <plugin>
+                   <plugin>
+                       <groupId>org.apache.maven.plugins</groupId>
+                       <artifactId>maven-surefire-plugin</artifactId>
+                       <version>2.19</version>
+                       <configuration>
+                           <argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -Dsl.featuresData.enablePerTestCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -Dsl.enableUpgrade=false -javaagent:${sl.testListenerPath}</argLine>
+                           <parallel>methods</parallel>
+                           <threadCount>5</threadCount>
+                       </configuration>
+                   </plugin>
+                   <plugin>
                         <groupId>io.sealights.on-premise.agents.plugin</groupId>
                         <artifactId>sealights-maven-plugin</artifactId>
                         <version>1.4.13</version>
