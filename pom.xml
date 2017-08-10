@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<jvmArguments>-javaagent:${sl.testListenerPath} -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8888</jvmArguments>
+                	<jvmArguments>-javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8888</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -265,22 +265,24 @@
                             </execution>
                         </executions>
                     </plugin>
-               </plugins>
-           </build>
-        </profile>
-        <profile>
-           <id>run_server</id>
-           <build>
-               <plugins>
-                     <plugin>
-                        <groupId>io.sealights.on-premise.agents.plugin</groupId>
-                        <artifactId>sealights-maven-plugin</artifactId>
-                        <version>1.4.13</version>
-                        <configuration>
-                            <tokenFile>sl_token.txt</tokenFile>
-                            <buildSessionIdFile>buildSessionId.txt</buildSessionIdFile>
-                        </configuration>
-                    </plugin>
+                      <plugin>
+                        <groupId>com.coderplus.maven.plugins</groupId>
+                        <artifactId>copy-rename-maven-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                          <execution>
+                            <id>copy-file</id>
+                            <phase>generate-sources</phase>
+                            <goals>
+                              <goal>copy</goal>
+                            </goals>
+                            <configuration>
+                              <sourceFile>${sl.testListenerPath}</sourceFile>
+                              <destinationFile>target/SeaLights/sl-test-listener.jar</destinationFile>
+                            </configuration>
+                          </execution>
+                        </executions>
+                      </plugin>
                </plugins>
            </build>
         </profile>
