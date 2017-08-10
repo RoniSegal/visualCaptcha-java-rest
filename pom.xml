@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<jvmArguments>-javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8888</jvmArguments>
+                	<jvmArguments>-javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
