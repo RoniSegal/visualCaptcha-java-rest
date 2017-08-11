@@ -22,6 +22,7 @@
 
             $scope.sayHello = function() {
                 var xhttp = new XMLHttpRequest();
+                var a=6;
                 xhttp.onreadystatechange = function() {
 
                     if (this.readyState == 4 && this.status == 200) {
