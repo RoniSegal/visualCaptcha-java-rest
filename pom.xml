@@ -94,7 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<jvmArguments>-Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:C:\Users\Jason\Downloads\java-agent-bootstrapper-1.0.0-SNAPSHOT-jar-with-dependencies.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080 -Dsl.featuresData.enablePerThreadCoverage=false -Dsl.useInitialColor=true -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
+                	<jvmArguments>-Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:C:\Users\Jason\Downloads\java-agent-bootstrapper-1.0.0-SNAPSHOT-jar-with-dependencies.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080 -Dsl.featuresData.enablePerThreadCoverage=false -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
                 	<!--jvmArguments>-Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8080 -Dsl.featuresData.enablePerThreadCoverage=false -Dsl.useInitialColor=true -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments-->
                 </configuration>
             </plugin>
