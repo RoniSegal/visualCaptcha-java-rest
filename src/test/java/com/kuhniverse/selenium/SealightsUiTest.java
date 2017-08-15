@@ -28,7 +28,7 @@ public class SealightsUiTest extends Locomotive {
         click("#do-magic");
         Thread.sleep(15*1000);
         String text = getText("#output");
-        Assert.assertEquals("Do Magic2", text);
+        Assert.assertEquals("Do Magic", text);
     }
 
 }
