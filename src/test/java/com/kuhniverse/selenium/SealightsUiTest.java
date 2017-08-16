@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 @Config(
-        browser = Browser.CHROME,
+        browser = Browser.PHANTOMJS,
         url = "http://localhost:8080/"
 )
 public class SealightsUiTest extends Locomotive {
