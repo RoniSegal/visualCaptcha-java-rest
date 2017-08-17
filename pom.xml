@@ -88,7 +88,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
-            <version1.2.1</version>
+            <version>1.2.1</version>
         </dependency>
     </dependencies>
 
