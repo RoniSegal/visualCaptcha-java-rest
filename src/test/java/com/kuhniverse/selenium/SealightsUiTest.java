@@ -24,7 +24,10 @@ public class SealightsUiTest {
         cliArgsCap.add("--ssl-protocol=any");
         cliArgsCap.add("--ignore-ssl-errors=true");
         capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cliArgsCap);
-        capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"phantomjs.exe");
+        String phantomExe = "phantomjs.exe";
+        if (OSValidator.isUnix())
+            phantomExe = "phantomjs";
+        capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomExe);
         driver = new PhantomJSDriver(capabilities);
         driver.get("http://localhost:8080/");
         //this.driver.manage().window().maximize();
@@ -46,5 +49,7 @@ public class SealightsUiTest {
         String text = driver.findElement(By.cssSelector("#output")).getText();
         Assert.assertEquals("Do Magic", text);
     }
+
+
 
 }
