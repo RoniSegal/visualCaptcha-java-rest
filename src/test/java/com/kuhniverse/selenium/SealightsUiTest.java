@@ -30,7 +30,7 @@ public class SealightsUiTest {
             phantomExe = "phantomjs";
         capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomExe);
         driver = new PhantomJSDriver(capabilities);
-        driver.get("http://localhost:8080/");
+        driver.get("http://localhost:8124/");
         //this.driver.manage().window().maximize();
     }
     @Test
