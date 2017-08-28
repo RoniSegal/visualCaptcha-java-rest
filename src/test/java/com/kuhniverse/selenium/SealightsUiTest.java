@@ -40,7 +40,7 @@ public class SealightsUiTest {
 
     @Test
     public void testSayHello() throws InterruptedException {
-        Thread.sleep(10 * 1000);
+        Thread.sleep(100 * 1000);
         driver.findElement(By.cssSelector("#say-hello")).click();
 
         Thread.sleep(15 * 1000);
@@ -50,7 +50,7 @@ public class SealightsUiTest {
 
     @Test
     public void testDoMagic() throws InterruptedException {
-        Thread.sleep(10 * 1000);
+        Thread.sleep(100 * 1000);
         driver.findElement(By.cssSelector("#do-magic")).click();
         Thread.sleep(15 * 1000);
         String text = driver.findElement(By.cssSelector("#output")).getText();
