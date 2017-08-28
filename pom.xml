@@ -218,7 +218,7 @@
                        <version>2.19</version>
                        <configuration>
                            <!--argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -javaagent:${sl.testListenerPath}</argLine-->
-                           <argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=debug -Dsl.log.toConsole=true -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=true -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -javaagent:${sl.testListenerPath}</argLine>
+                           <argLine>${argLine} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=true -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true -javaagent:${sl.testListenerPath}</argLine>
                            <parallel>methods</parallel>
                            <threadCount>5</threadCount>
                        </configuration>

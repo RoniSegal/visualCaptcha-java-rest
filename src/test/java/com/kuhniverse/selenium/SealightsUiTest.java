@@ -21,6 +21,7 @@ public class SealightsUiTest {
         cliArgsCap.add("--ssl-protocol=any");
         cliArgsCap.add("--ignore-ssl-errors=true");
         cliArgsCap.add("--local-to-remote-url-access=true");
+        cliArgsCap.add("--debug=true");
         capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cliArgsCap);
         String phantomExe = "phantomjs.exe";
         if (OSValidator.isUnix())
