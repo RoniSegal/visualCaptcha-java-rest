@@ -12,12 +12,13 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 
 public class SealightsUiTest {
-    WebDriver driver;
+    PhantomJSDriver driver;
     @Before
-    public void setup() {
+    public void setup() throws InterruptedException {
         ArrayList<String> cliArgsCap = new ArrayList<String>();
         DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
         cliArgsCap.add("--web-security=false");
@@ -30,6 +31,7 @@ public class SealightsUiTest {
         capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomExe);
         driver = new PhantomJSDriver(capabilities);
         driver.get("http://localhost:8080/");
+        driver.wait(20*1000);
         //this.driver.manage().window().maximize();
     }
     @Test
