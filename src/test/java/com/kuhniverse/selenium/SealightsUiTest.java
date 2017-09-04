@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 
 public class SealightsUiTest {
-    String baseUrl = "http://localhost:8080/";
+    String baseUrl = "http://localhost:8124/";
 
 
     private PhantomJSDriver createDriver() {
