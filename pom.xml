@@ -226,7 +226,7 @@
                    <plugin>
                         <groupId>io.sealights.on-premise.agents.plugin</groupId>
                         <artifactId>sealights-maven-plugin</artifactId>
-                        <version>1.6.0</version>
+                        <version>1.7.0</version>
                         <configuration>
                             <tokenFile>sl_token.txt</tokenFile>
                             <buildSessionIdFile>buildSessionId</buildSessionIdFile>
@@ -264,7 +264,7 @@
                      <plugin>
                         <groupId>io.sealights.on-premise.agents.plugin</groupId>
                         <artifactId>sealights-maven-plugin</artifactId>
-                        <version>1.6.0</version>
+                        <version>1.7.0</version>
                         <configuration>
                             <tokenFile>sl_token.txt</tokenFile>
                             <buildSessionIdFile>buildSessionId.txt</buildSessionIdFile>
