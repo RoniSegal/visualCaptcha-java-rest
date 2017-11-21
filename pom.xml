@@ -31,6 +31,7 @@
         <maven.surefire.include>com/kuhniverse/ut/**/*.java</maven.surefire.include>
         <maven.failsafe.include>com/kuhniverse/it/**/*.java</maven.failsafe.include>
         <selenium_version>3.4.0</selenium_version>
+	<SL_LOG_FLAGS></SL_LOG_FLAGS>
     </properties>
 
     <ciManagement>
