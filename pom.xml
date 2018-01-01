@@ -278,6 +278,7 @@
                             <logEnabled>false</logEnabled>
                             <logLevel>INFO</logLevel>
                             <testStage>Unit Tests</testStage>
+			    <includeResources>true</includeResources>
                             <metadata>
                                 <jobName>${JOB_NAME}</jobName>
                                 <logsUrl>${BUILD_URL}/console</logsUrl>
