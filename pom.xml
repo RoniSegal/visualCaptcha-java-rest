@@ -115,7 +115,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                 	<!--jvmArguments>-Dsl.labId=${SL_LAB_ID} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:C:\Users\Jason\Downloads\java-agent-bootstrapper-1.0.0-SNAPSHOT-jar-with-dependencies.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8124 -Dsl.featuresData.enablePerThreadCoverage=true  -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments-->
-                	<jvmArguments>-Dsl.labId=${SL_LAB_ID} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:target/SeaLights/sl-test-listener.jar -Dsl.tokenFile=sl_token.txt -Dsl.buildSessionIdFile=buildSessionId.txt -Dserver.port=8124 -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
+                	<jvmArguments>-Dsl.labId=${SL_LAB_ID} -Dsl.log.enabled=true -Dsl.log.level=info -Dsl.log.toConsole=true -javaagent:target/SeaLights/sl-test-listener.jar -Dserver.port=8124 -Dsl.featuresData.enablePerThreadCoverage=true -Dsl.useInitialColor=false -Dsl.featuresData.enableProcessColoring=true -Dsl.featuresData.enableHttpColoring=true</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -226,7 +226,7 @@
                    <plugin>
                         <groupId>io.sealights.on-premise.agents.plugin</groupId>
                         <artifactId>sealights-maven-plugin</artifactId>
-                        <version>1.7.182</version>
+                        <version>2.0.203</version>
                         <configuration>
                             <tokenFile>sl_token.txt</tokenFile>
                             <buildSessionIdFile>buildSessionId</buildSessionIdFile>
@@ -264,7 +264,7 @@
                      <plugin>
                         <groupId>io.sealights.on-premise.agents.plugin</groupId>
                         <artifactId>sealights-maven-plugin</artifactId>
-                        <version>1.7.182</version>
+                        <version>2.0.203</version>
                         <configuration>
                             <tokenFile>sl_token.txt</tokenFile>
                             <buildSessionIdFile>buildSessionId.txt</buildSessionIdFile>
